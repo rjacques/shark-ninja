@@ -70,8 +70,9 @@ const lessonTwo = {
 };
 
 const lessonThree = {
-  lessonLabel: "Lesson 3: Kitchen",
+  lessonLabel: "Lesson 3:",
   banner: sharedSectionBanner,
+  title: "Kitchen",
   description:
     "Simple kitchen solutions that make cooking and desserts easier to enjoy.",
   products: [
@@ -139,8 +140,9 @@ const lessonFour = {
 };
 
 const lessonFive = {
-  lessonLabel: "Lesson 5: Home Cleaning",
+  lessonLabel: "Lesson 5:",
   banner: floorSectionBanner,
+  title: "Home Cleaning",
   description:
     "Home cleaning products designed to make every day cleaning quicker and easier.",
   products: [
@@ -197,8 +199,9 @@ const lessonFive = {
 };
 
 const lessonSix = {
-  lessonLabel: "Lesson 6: How to Sell",
+  lessonLabel: "Lesson 6:",
   banner: sellingSectionBanner,
+  title: "How to Sell",
   description:
     "Use a simple, repeatable way to help customers choose the right product. Focus on understanding their needs and showing how the product makes their life easier.",
   steps: [
@@ -449,9 +452,8 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-purple);">
           <div class="section-banner section-banner-kitchen" style={kitchenBannerBackground(lessonThree.banner)}>
             <div class="section-banner-copy">
-              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
-                {lessonThree.lessonLabel}
-              </h2>
+              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonThree.lessonLabel}</p>
+              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">{lessonThree.title}</h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
                 {lessonThree.description}
               </p>
@@ -565,9 +567,8 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-green);">
           <div class="section-banner" style={sectionBannerBackground(lessonFive.banner)}>
             <div class="section-banner-copy">
-              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
-                {lessonFive.lessonLabel}
-              </h2>
+              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonFive.lessonLabel}</p>
+              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">{lessonFive.title}</h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
                 {lessonFive.description}
               </p>
@@ -621,9 +622,8 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
           <div class="section-banner" style={sectionBannerBackground(lessonSix.banner)}>
             <div class="section-banner-copy">
-              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
-                {lessonSix.lessonLabel}
-              </h2>
+              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonSix.lessonLabel}</p>
+              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">{lessonSix.title}</h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
                 {lessonSix.description}
               </p>
