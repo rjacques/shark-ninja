@@ -492,9 +492,6 @@ input:disabled {
   min-height: 14rem;
   border-radius: 1rem;
   background-color: #f6f4f0;
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.7) 38%, rgba(255, 255, 255, 0.36) 72%, rgba(255, 255, 255, 0.1) 100%),
-    var(--section-banner-image);
   background-position: left center, center center;
   background-repeat: no-repeat;
   background-size: auto, cover;
@@ -510,9 +507,6 @@ input:disabled {
 .section-banner-kitchen {
   border: 1px solid rgba(17, 17, 17, 0.08);
   background-color: var(--sn-soft-surface);
-  background-image:
-    linear-gradient(90deg, rgba(246, 246, 243, 0.92) 0%, rgba(246, 246, 243, 0.78) 40%, rgba(246, 246, 243, 0.38) 74%, rgba(246, 246, 243, 0.1) 100%),
-    var(--section-banner-image);
 }
 
 .section-banner-kitchen .heading-display,
@@ -528,9 +522,6 @@ input:disabled {
   min-height: 22rem;
   border-radius: 1rem;
   background-color: #f3f2ef;
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(255, 255, 255, 0) 100%),
-    var(--course-hero-image);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -807,9 +798,6 @@ input:disabled {
   padding: 1.25rem;
   border-radius: 0.95rem;
   background-color: #111111;
-  background-image:
-    linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.82) 40%, rgba(17, 17, 17, 0.94) 100%),
-    var(--activity-brief-image);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

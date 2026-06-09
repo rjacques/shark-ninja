@@ -11,6 +11,18 @@ const floorSectionBanner = "/images/banner-floor.jpg";
 const sellingSectionBanner = "/images/banner-howtosell.jpg";
 const sellingActivityImage = "/images/selling-activity.jpg";
 
+const courseHeroBackground = (imagePath: string) =>
+  `background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(255, 255, 255, 0) 100%), url('${imagePath}')`;
+
+const sectionBannerBackground = (imagePath: string) =>
+  `background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.7) 38%, rgba(255, 255, 255, 0.36) 72%, rgba(255, 255, 255, 0.1) 100%), url('${imagePath}')`;
+
+const kitchenBannerBackground = (imagePath: string) =>
+  `background-image: linear-gradient(90deg, rgba(246, 246, 243, 0.92) 0%, rgba(246, 246, 243, 0.78) 40%, rgba(246, 246, 243, 0.38) 74%, rgba(246, 246, 243, 0.1) 100%), url('${imagePath}')`;
+
+const activityBriefBackground = (imagePath: string) =>
+  `background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.82) 40%, rgba(17, 17, 17, 0.94) 100%), url('${imagePath}')`;
+
 const sectionNav = [
   { href: "#lesson-1", label: "Lesson 1" },
   { href: "#lesson-2", label: "Lesson 2" },
@@ -390,7 +402,7 @@ const lessonSix = {
 
       <section id="lesson-1" class="section-wrap reveal mt-6 scroll-mt-28">
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
-          <div class="course-hero" style={`--course-hero-image: url('${lessonOne.banner}')`}>
+          <div class="course-hero" style={courseHeroBackground(lessonOne.banner)}>
             <div class="course-hero-panel">
               <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonOne.lessonLabel}</p>
               <p class="lesson-eyebrow mt-4 text-sm font-semibold text-slate-600">{lessonOne.eyebrow}</p>
@@ -428,7 +440,7 @@ const lessonSix = {
 
       <section id="lesson-3" class="section-wrap reveal mt-8 scroll-mt-28">
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-purple);">
-          <div class="section-banner section-banner-kitchen" style={`--section-banner-image: url('${lessonThree.banner}')`}>
+          <div class="section-banner section-banner-kitchen" style={kitchenBannerBackground(lessonThree.banner)}>
             <div class="section-banner-copy">
               <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
                 {lessonThree.lessonLabel}
@@ -484,7 +496,7 @@ const lessonSix = {
 
       <section id="lesson-4" class="section-wrap reveal mt-8 scroll-mt-28">
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-pink);">
-          <div class="section-banner" style={`--section-banner-image: url('${lessonFour.banner}')`}>
+          <div class="section-banner" style={sectionBannerBackground(lessonFour.banner)}>
             <div class="section-banner-copy">
               <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonFour.lessonLabel}</p>
               <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">
@@ -544,7 +556,7 @@ const lessonSix = {
 
       <section id="lesson-5" class="section-wrap reveal mt-8 scroll-mt-28">
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-green);">
-          <div class="section-banner" style={`--section-banner-image: url('${lessonFive.banner}')`}>
+          <div class="section-banner" style={sectionBannerBackground(lessonFive.banner)}>
             <div class="section-banner-copy">
               <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
                 {lessonFive.lessonLabel}
@@ -600,7 +612,7 @@ const lessonSix = {
 
       <section id="lesson-6" class="section-wrap reveal mt-8 scroll-mt-28 pb-10">
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
-          <div class="section-banner" style={`--section-banner-image: url('${lessonSix.banner}')`}>
+          <div class="section-banner" style={sectionBannerBackground(lessonSix.banner)}>
             <div class="section-banner-copy">
               <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
                 {lessonSix.lessonLabel}
@@ -650,10 +662,7 @@ const lessonSix = {
                   hidden={index !== 0}
                 >
                   <div class="activity-step-layout">
-                    <div
-                      class="activity-brief"
-                      style={`--activity-brief-image: url('${sellingActivityImage}')`}
-                    >
+                    <div class="activity-brief" style={activityBriefBackground(sellingActivityImage)}>
                       <h3 class="activity-brief-title heading-display text-2xl font-semibold sm:text-3xl">
                         {lessonSix.activityTitle}
                       </h3>
