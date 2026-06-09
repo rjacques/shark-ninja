@@ -34,7 +34,6 @@ const sectionNav = [
 
 const lessonOne = {
   banner: "/images/homebanner.jpg",
-  eyebrow: navCourseTitle,
   title: "Welcome to SharkNinja",
   paragraphs: [
     "SharkNinja offers smart, easy-to-use solutions for cooking, cleaning, and everyday living.",
@@ -407,8 +406,7 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
           <div class="course-hero" style={courseHeroBackground(lessonOne.banner)}>
             <div class="course-hero-panel">
-              <p class="lesson-eyebrow text-sm font-semibold text-slate-600">{lessonOne.eyebrow}</p>
-              <h1 class="heading-display mt-4 text-3xl font-semibold sm:text-4xl lg:text-5xl">
+              <h1 class="heading-display text-3xl font-semibold sm:text-4xl lg:text-5xl">
                 {lessonOne.title}
               </h1>
               <div class="mt-6 space-y-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
