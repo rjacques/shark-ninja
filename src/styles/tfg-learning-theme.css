@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --tfg-purple: #7a2f96;
+  --tfg-purple-deep: #5e2374;
+  --tfg-ink: #222222;
+  --tfg-stone: #efeae4;
+  --tfg-paper: #f7f4ef;
+  --tfg-line: rgba(34, 34, 34, 0.12);
+  --tfg-sage: #cfd9cf;
+  --tfg-blush: #d8b1a4;
+  --tfg-blue: #c9dbe8;
+  --tfg-gold: #b6aa69;
+  --tfg-radius: 1.75rem;
+  --tfg-shadow: 0 24px 80px rgba(34, 34, 34, 0.08);
+  --tfg-font: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--tfg-font);
+  color: var(--tfg-ink);
+  background:
+    radial-gradient(circle at top right, rgba(122, 47, 150, 0.12), transparent 30%),
+    linear-gradient(180deg, #faf8f5 0%, #f4efe9 100%);
+}
+
+.tfg-shell {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.tfg-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(216, 177, 164, 0.22), transparent 24%),
+    radial-gradient(circle at 84% 10%, rgba(122, 47, 150, 0.12), transparent 18%);
+}
+
+.tfg-section {
+  position: relative;
+  z-index: 1;
+}
+
+.tfg-kicker {
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.tfg-card {
+  border: 1px solid var(--tfg-line);
+  border-radius: var(--tfg-radius);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--tfg-shadow);
+}

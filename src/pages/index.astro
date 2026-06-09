@@ -1,0 +1,894 @@
+---
+import "../styles/global.css";
+
+const pageTitle = "@home SharkNinja Product Range - Quick Course";
+const courseDescription =
+  "SharkNinja offers smart, easy-to-use solutions for cooking, cleaning, and everyday living.";
+const tfgLogo = "/tfg-logo.svg";
+const sharedSectionBanner = "/images/banner-kitchen.jpg";
+const stylingSectionBanner = "/images/banner-styling.jpg";
+const floorSectionBanner = "/images/banner-floor.jpg";
+const sellingSectionBanner = "/images/banner-howtosell.jpg";
+const sellingActivityImage = "/images/selling-activity.jpg";
+
+const sectionNav = [
+  { href: "#lesson-1", label: "Lesson 1" },
+  { href: "#lesson-2", label: "Lesson 2" },
+  { href: "#lesson-3", label: "Lesson 3" },
+  { href: "#lesson-4", label: "Lesson 4" },
+  { href: "#lesson-5", label: "Lesson 5" },
+  { href: "#lesson-6", label: "Lesson 6" },
+];
+
+const lessonOne = {
+  lessonLabel: "Lesson 1:",
+  banner: "/images/homebanner.jpg",
+  eyebrow: "Introduction to SharkNinja Product Range",
+  title: "Welcome to SharkNinja",
+  paragraphs: [
+    "SharkNinja offers smart, easy-to-use solutions for cooking, cleaning, and everyday living.",
+    "In this course, you’ll learn about the different product ranges and how to recommend the right one based on what your customer needs.",
+    "This will help you have better conversations and make confident product recommendations instore.",
+  ],
+};
+
+const lessonTwo = {
+  lessonLabel: "Lesson 2:",
+  title: "Explore the Range",
+  categories: [
+    {
+      title: "Kitchen",
+      accent: "var(--sn-brand-purple)",
+      description: "Products that make cooking and desserts quick and easy.",
+    },
+    {
+      title: "Styling Solutions",
+      accent: "var(--sn-brand-pink)",
+      description:
+        "Products that help customers style their hair quickly and easily.",
+    },
+    {
+      title: "Home Cleaning",
+      accent: "var(--sn-brand-green)",
+      description:
+        "Products that help customers clean faster with less effort.",
+    },
+  ],
+};
+
+const lessonThree = {
+  lessonLabel: "Lesson 3: Kitchen",
+  banner: sharedSectionBanner,
+  description:
+    "Simple kitchen solutions that make cooking and desserts easier to enjoy.",
+  products: [
+    {
+      title: "Ninja Creami Deluxe",
+      image: "/images/creami-deluxe-final.jpg",
+      imageAlt: "Ninja Creami Deluxe",
+      description: "An easy way to make desserts at home.",
+      keyPoints: [
+        "Makes desserts quickly",
+        "Simple to use",
+        "Great for home treats",
+      ],
+      sellingTip: "Focus on how quick and easy it is to make desserts.",
+      whenToRecommend: [
+        "Customer wants quick, easy desserts",
+        "They want something simple",
+        "They enjoy making treats at home",
+      ],
+    },
+    {
+      title: "Ninja Creami Swirl",
+      image: "/images/creami-swirl-final.jpg",
+      imageAlt: "Ninja Creami Swirl",
+      description: "A dessert maker with more options and variety.",
+      keyPoints: [
+        "Offers more variety",
+        "Flexible dessert options",
+        "Easy to use",
+      ],
+      sellingTip: "Focus on variety and giving customers more choice.",
+      whenToRecommend: [
+        "Customer wants more options",
+        "They like variety",
+        "They are comparing products",
+      ],
+    },
+  ],
+};
+
+const lessonFour = {
+  lessonLabel: "Lesson 4:",
+  banner: stylingSectionBanner,
+  title: "Styling Solutions",
+  description:
+    "Styling solutions designed to make everyday hair styling quick and easy.",
+  product: {
+    title: "Shark FlexStyle 5in1 Air Styler",
+    image: "/images/flexstyle-final.jpg",
+    imageAlt: "Shark FlexStyle 5in1 Air Styler",
+    description: "A styling tool with multiple functions in one.",
+    keyPoints: [
+      "Includes multiple attachments",
+      "Different styling options",
+      "Easy to switch between functions",
+    ],
+    sellingTip:
+      "Focus on convenience and having one tool for different styles.",
+    whenToRecommend: [
+      "Customer wants more than one styling option",
+      "They want a simple, all-in-one solution",
+      "They are looking to save time when styling",
+    ],
+  },
+};
+
+const lessonFive = {
+  lessonLabel: "Lesson 5: Home Cleaning",
+  banner: floorSectionBanner,
+  description:
+    "Home cleaning products designed to make every day cleaning quicker and easier.",
+  products: [
+    {
+      title: "Shark Power Detect Clean & Empty",
+      image: "/images/powerdetect-final.jpg",
+      imageAlt: "Shark Power Detect Clean & Empty",
+      description: "A smart vacuum that cleans and empties itself.",
+      keyPoints: [
+        "Detects dirt automatically",
+        "Empties itself",
+        "Low effort cleaning",
+      ],
+      sellingTip: "Focus on convenience and low effort.",
+      whenToRecommend: [
+        "Customer wants less effort cleaning",
+        ["They don’t want to empty the vacuum often", "Looking for convenience"],
+      ],
+    },
+    {
+      title: "Shark Power Detect Cordless",
+      image: "/images/powerdetect-cordless-final.jpg",
+      imageAlt: "Shark Power Detect Cordless",
+      description: "A cordless vacuum for quick, everyday cleaning.",
+      keyPoints: [
+        "Cordless and easy to move",
+        "Lightweight",
+        "Great for daily use",
+      ],
+      sellingTip: "Focus on ease of use and flexibility.",
+      whenToRecommend: [
+        "Customer needs something quick and easy",
+        ["Small spaces", "Everyday cleaning"],
+      ],
+    },
+    {
+      title: "Shark PowerPro Cordless",
+      image: "/images/powerpro-final.jpg",
+      imageAlt: "Shark PowerPro Cordless",
+      description: "A powerful vacuum designed for deeper cleaning.",
+      keyPoints: [
+        "Strong cleaning performance",
+        "Built for bigger cleaning tasks",
+        "Reliable and effective",
+      ],
+      sellingTip: "Focus on power and performance.",
+      whenToRecommend: [
+        "Customer wants strong cleaning results",
+        "Larger homes",
+        "Needs deeper cleaning",
+      ],
+    },
+  ],
+};
+
+const lessonSix = {
+  lessonLabel: "Lesson 6: How to Sell",
+  banner: sellingSectionBanner,
+  description:
+    "Use a simple, repeatable way to help customers choose the right product. Focus on understanding their needs and showing how the product makes their life easier.",
+  steps: [
+    {
+      number: "01",
+      name: "Ask",
+      actions: [
+        "Ask simple questions",
+        "Listen to the customer",
+        "Understand what they need help with",
+      ],
+    },
+    {
+      number: "02",
+      name: "Choose",
+      actions: [
+        "Recommend the right product",
+        "Match it to their lifestyle or space",
+        "Keep it relevant",
+      ],
+    },
+    {
+      number: "03",
+      name: "Explain",
+      actions: [
+        "Focus on benefits, not features",
+        "Keep it simple",
+        "Show how it makes life easier",
+      ],
+    },
+    {
+      number: "04",
+      name: "Recommend",
+      actions: [
+        "Be confident in your suggestion",
+        "Speak clearly",
+        "Link it back to their needs",
+      ],
+    },
+    {
+      number: "05",
+      name: "Support",
+      actions: [
+        "Answer questions clearly",
+        "Reassure the customer",
+        "Focus on value, not pressure",
+      ],
+    },
+  ],
+  activityTitle: "Selling Activity",
+  questions: [
+    {
+      title: "Question 1 of 5",
+      correctOption: "B",
+      scenarioLines: [
+        "Scenario:",
+        "A customer says:",
+        "“I don’t have a lot of time. I just want something quick and easy.”",
+      ],
+      prompt: "What should you do FIRST?",
+      options: [
+        "A. Recommend the fastest product",
+        "B. Ask what they need help with",
+        "C. Start explaining time-saving features",
+        "D. Show the most popular options",
+      ],
+      correct:
+        "Even when a customer sounds clear, you should always start by understanding their needs before recommending a solution.",
+      incorrect:
+        "Jumping to solutions too quickly can lead to the wrong recommendation. Always start by asking questions.",
+    },
+    {
+      title: "Question 2 of 5",
+      correctOption: "B",
+      scenarioLines: [
+        "Scenario:",
+        "The customer says:",
+        "“I have a small space at home.”",
+      ],
+      prompt: "Which is the BEST response?",
+      options: [
+        "A. Recommend any compact product",
+        "B. Ask a follow-up question about their space before recommending",
+        "C. Suggest the most popular product",
+        "D. Focus only on product features",
+      ],
+      correct:
+        "Even with a clear need, asking a follow-up question helps ensure the product truly fits their space.",
+      incorrect:
+        "Assuming without confirming can lead to poor recommendations. Always clarify needs when possible.",
+    },
+    {
+      title: "Question 3 of 5",
+      correctOption: "B",
+      scenarioLines: [
+        "Scenario:",
+        "You are showing a Shark vacuum to a customer who says:",
+        "“I don’t want something complicated.”",
+      ],
+      prompt: "Which is the MOST effective way to explain the product?",
+      options: [
+        "A. “It has multiple attachments and advanced features”",
+        "B. “It’s designed to make cleaning simple and saves you time”",
+        "C. “This is one of our most popular models”",
+        "D. “Let me show you everything it can do”",
+      ],
+      correct:
+        "Focus on simple, relevant benefits that match what the customer cares about.",
+      incorrect:
+        "Giving too much information or focusing on features can overwhelm the customer instead of helping them.",
+    },
+    {
+      title: "Question 4 of 5",
+      correctOption: "B",
+      scenarioLines: [
+        "Scenario:",
+        "The customer asks:",
+        "“What do you recommend?”",
+      ],
+      prompt: "What is the BEST response?",
+      options: [
+        "A. “It depends, there are many options”",
+        "B. Recommend a product confidently and explain why it suits them",
+        "C. Show multiple options and let them decide",
+        "D. Repeat product features without recommending",
+      ],
+      correct:
+        "Customers are asking for guidance. A confident recommendation builds trust when linked to their needs.",
+      incorrect:
+        "Avoiding a recommendation creates uncertainty and reduces confidence.",
+    },
+    {
+      title: "Question 5 of 5",
+      correctOption: "B",
+      scenarioLines: [
+        "Scenario:",
+        "The customer says:",
+        "“I’m not sure if it’s worth it.”",
+      ],
+      prompt: "What is the BEST response?",
+      options: [
+        "A. “It’s a high-quality product, so it’s worth the price”",
+        "B. “Based on what you told me, this will save you time and effort—here’s why it’s a good fit”",
+        "C. Offer a discount to help them decide",
+        "D. Move on to another product",
+      ],
+      correct:
+        "Linking the value directly to the customer’s needs helps them feel confident in their decision.",
+      incorrect:
+        "Generic reassurance, discounts, or avoidance don’t address the customer’s actual concern.",
+    },
+  ],
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={courseDescription} />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="course-shell">
+    <main class="site-frame mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+      <header class="site-header sticky top-3 z-40 rounded-[1rem] px-3 py-3 md:px-6">
+        <div class="flex items-center justify-between gap-3 md:hidden">
+          <span class="site-logo-badge">
+            <img src={tfgLogo} alt="TFG logo" class="h-10 w-10 shrink-0 object-cover" />
+          </span>
+
+          <details class="relative shrink-0" data-mobile-nav>
+            <summary class="site-menu-button flex h-11 w-11 list-none items-center justify-center [&::-webkit-details-marker]:hidden">
+              <span class="sr-only">Toggle lesson navigation</span>
+              <span aria-hidden="true" class="flex flex-col gap-[0.28rem]">
+                <span class="block h-[2px] w-5 rounded-full bg-current"></span>
+                <span class="block h-[2px] w-5 rounded-full bg-current"></span>
+                <span class="block h-[2px] w-5 rounded-full bg-current"></span>
+              </span>
+            </summary>
+            <div class="site-menu-panel absolute right-0 top-[calc(100%+0.75rem)] z-20 w-64 max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-[0.9rem] p-2">
+              <div class="flex flex-col gap-1.5 text-sm text-black">
+                {sectionNav.map((item) => (
+                  <a href={item.href} class="site-mobile-link px-4 py-3" data-mobile-nav-link>{item.label}</a>
+                ))}
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="hidden md:flex md:items-center md:justify-between md:gap-6">
+          <span class="site-logo-badge">
+            <img src={tfgLogo} alt="TFG logo" class="h-10 w-10 object-cover" />
+          </span>
+          <nav class="site-nav flex flex-wrap gap-2 text-sm" aria-label="Lesson navigation">
+            {sectionNav.map((item) => (
+              <a href={item.href} class="site-nav-link">{item.label}</a>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      <section id="lesson-1" class="section-wrap reveal mt-6 scroll-mt-28">
+        <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
+          <div class="course-hero" style={`--course-hero-image: url('${lessonOne.banner}')`}>
+            <div class="course-hero-panel">
+              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonOne.lessonLabel}</p>
+              <p class="lesson-eyebrow mt-4 text-sm font-semibold text-slate-600">{lessonOne.eyebrow}</p>
+              <h1 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl lg:text-5xl">
+                {lessonOne.title}
+              </h1>
+              <div class="mt-6 space-y-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
+                {lessonOne.paragraphs.map((paragraph) => (
+                  <p>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-2" class="section-wrap reveal mt-8 scroll-mt-28">
+        <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-pink);">
+          <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonTwo.lessonLabel}</p>
+          <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">
+            {lessonTwo.title}
+          </h2>
+          <div class="feature-grid mt-8 grid gap-0 md:grid-cols-3">
+            {lessonTwo.categories.map((category) => (
+              <div class="feature-column category-card px-0 py-6">
+                <div class="soft-panel feature-panel-solid" style={`--feature-panel-color: ${category.accent};`}>
+                  <h3 class="heading-display text-2xl font-semibold">{category.title}</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-700">{category.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-3" class="section-wrap reveal mt-8 scroll-mt-28">
+        <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-purple);">
+          <div class="section-banner section-banner-kitchen" style={`--section-banner-image: url('${lessonThree.banner}')`}>
+            <div class="section-banner-copy">
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
+                {lessonThree.lessonLabel}
+              </h2>
+              <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
+                {lessonThree.description}
+              </p>
+            </div>
+          </div>
+          <div class="product-grid product-grid-equal mt-8 grid gap-0 lg:grid-cols-2">
+            {lessonThree.products.map((product) => (
+              <div class="product-column product-card px-0 py-6">
+                <div class="soft-panel">
+                  {product.image && (
+                    <figure class="product-media mb-6">
+                      <img src={product.image} alt={product.imageAlt ?? product.title} class="product-image" loading="lazy" />
+                    </figure>
+                  )}
+                  <h3 class="heading-display text-2xl font-semibold">{product.title}</h3>
+                  <p class="mt-4 text-base leading-7 text-slate-700">{product.description}</p>
+
+                  <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Key Points</p>
+                  <ul class="outline-list mt-4">
+                    {product.keyPoints.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+
+                  <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Selling Tip</p>
+                  <p class="mt-3 text-base leading-7 text-slate-700">{product.sellingTip}</p>
+
+                  <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">When to Recommend</p>
+                  <ul class="outline-list mt-4">
+                    {product.whenToRecommend.map((item) => (
+                      <li>
+                        {Array.isArray(item)
+                          ? item.map((line, index) => (
+                              <>
+                                {index > 0 && <br />}
+                                {line}
+                              </>
+                            ))
+                          : item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-4" class="section-wrap reveal mt-8 scroll-mt-28">
+        <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-pink);">
+          <div class="section-banner" style={`--section-banner-image: url('${lessonFour.banner}')`}>
+            <div class="section-banner-copy">
+              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonFour.lessonLabel}</p>
+              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">
+                {lessonFour.title}
+              </h2>
+              <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
+                {lessonFour.description}
+              </p>
+            </div>
+          </div>
+          <div class="product-single mt-8">
+            <div class="product-column product-card px-0 py-6">
+              <div class="soft-panel">
+                <div class="product-layout product-layout-sidebar">
+                  {lessonFour.product.image && (
+                    <figure class="product-media product-media-sidebar">
+                      <img src={lessonFour.product.image} alt={lessonFour.product.imageAlt ?? lessonFour.product.title} class="product-image" loading="lazy" />
+                    </figure>
+                  )}
+
+                  <div class="product-detail-stack">
+                    <h3 class="heading-display text-2xl font-semibold">{lessonFour.product.title}</h3>
+                    <p class="mt-4 text-base leading-7 text-slate-700">{lessonFour.product.description}</p>
+
+                    <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Key Points</p>
+                    <ul class="outline-list mt-4">
+                      {lessonFour.product.keyPoints.map((point) => (
+                        <li>{point}</li>
+                      ))}
+                    </ul>
+
+                    <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Selling Tip</p>
+                    <p class="mt-3 text-base leading-7 text-slate-700">{lessonFour.product.sellingTip}</p>
+
+                    <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">When to Recommend</p>
+                    <ul class="outline-list mt-4">
+                      {lessonFour.product.whenToRecommend.map((item) => (
+                        <li>
+                          {Array.isArray(item)
+                            ? item.map((line, index) => (
+                                <>
+                                  {index > 0 && <br />}
+                                  {line}
+                                </>
+                              ))
+                            : item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-5" class="section-wrap reveal mt-8 scroll-mt-28">
+        <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-green);">
+          <div class="section-banner" style={`--section-banner-image: url('${lessonFive.banner}')`}>
+            <div class="section-banner-copy">
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
+                {lessonFive.lessonLabel}
+              </h2>
+              <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
+                {lessonFive.description}
+              </p>
+            </div>
+          </div>
+          <div class="product-grid product-grid-equal product-grid-three mt-8 grid gap-0 lg:grid-cols-3">
+            {lessonFive.products.map((product) => (
+              <div class="product-column product-card px-0 py-6">
+                <div class="soft-panel">
+                  {product.image && (
+                    <figure class="product-media mb-6">
+                      <img src={product.image} alt={product.imageAlt ?? product.title} class="product-image" loading="lazy" />
+                    </figure>
+                  )}
+                  <h3 class="heading-display text-2xl font-semibold">{product.title}</h3>
+                  <p class="mt-4 text-base leading-7 text-slate-700">{product.description}</p>
+
+                  <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Key Points</p>
+                  <ul class="outline-list mt-4">
+                    {product.keyPoints.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+
+                  <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Selling Tip</p>
+                  <p class="mt-3 text-base leading-7 text-slate-700">{product.sellingTip}</p>
+
+                  <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">When to Recommend</p>
+                  <ul class="outline-list mt-4">
+                    {product.whenToRecommend.map((item) => (
+                      <li>
+                        {Array.isArray(item)
+                          ? item.map((line, index) => (
+                              <>
+                                {index > 0 && <br />}
+                                {line}
+                              </>
+                            ))
+                          : item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="lesson-6" class="section-wrap reveal mt-8 scroll-mt-28 pb-10">
+        <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
+          <div class="section-banner" style={`--section-banner-image: url('${lessonSix.banner}')`}>
+            <div class="section-banner-copy">
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
+                {lessonSix.lessonLabel}
+              </h2>
+              <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
+                {lessonSix.description}
+              </p>
+            </div>
+          </div>
+
+          <div class="steps-showcase mt-8 grid gap-4">
+            {lessonSix.steps.map((step) => (
+              <article class="step-showcase-card">
+                <div class="step-showcase-number">
+                  <p class="step-number-badge">
+                    <span class="step-number-label">Step</span>
+                    <span class="step-number-value">{step.number}</span>
+                  </p>
+                </div>
+                <div class="step-showcase-content">
+                  <div class="step-showcase-block">
+                    <p class="step-showcase-title text-base font-semibold text-slate-800">{step.name}</p>
+                  </div>
+                  <div class="step-showcase-block">
+                    <p class="data-label text-sm font-semibold tracking-[0.08em] text-slate-500">What to Do</p>
+                    <ul class="step-action-list mt-3">
+                      {step.actions.map((action) => (
+                        <li>{action}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div class="mt-8">
+            <div class="activity-shell" data-activity-quiz>
+              {lessonSix.questions.map((question, index) => (
+                <section
+                  class="activity-step"
+                  data-activity-step
+                  data-question-index={index}
+                  data-correct-option={question.correctOption}
+                  data-correct-feedback={question.correct}
+                  data-incorrect-feedback={question.incorrect}
+                  hidden={index !== 0}
+                >
+                  <div class="activity-step-layout">
+                    <div
+                      class="activity-brief"
+                      style={`--activity-brief-image: url('${sellingActivityImage}')`}
+                    >
+                      <h3 class="activity-brief-title heading-display text-2xl font-semibold sm:text-3xl">
+                        {lessonSix.activityTitle}
+                      </h3>
+                      <div class="activity-brief-body">
+                        <p class="activity-chip">Test your knowledge</p>
+                        <div class="activity-scenario-wrap">
+                          <div class="activity-avatar" aria-hidden="true">C</div>
+                          <div class="activity-scenario-card">
+                            {question.scenarioLines.map((line, lineIndex) => (
+                              <p
+                                class:list={[
+                                  "activity-scenario-line",
+                                  lineIndex < question.scenarioLines.length - 1 &&
+                                    "activity-scenario-meta",
+                                  lineIndex === question.scenarioLines.length - 1 &&
+                                    "activity-scenario-quote",
+                                ]}
+                              >
+                                {line}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="activity-card">
+                      <div class="activity-card-head">
+                        <p class="activity-card-kicker">Knowledge Check</p>
+                        <p class="activity-card-progress">{question.title}</p>
+                      </div>
+
+                      <div class="activity-question-panel">
+                        <p class="activity-prompt">{question.prompt}</p>
+                      </div>
+
+                      <ul class="response-list activity-response-list text-base leading-7 text-slate-700">
+                        {question.options.map((option) => (
+                          <li>
+                            <button
+                              type="button"
+                              class="response-option"
+                              data-option-letter={option.slice(0, 1)}
+                              aria-pressed="false"
+                            >
+                              <span class="response-option-text">{option}</span>
+                              <span class="response-option-indicator" aria-hidden="true"></span>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div class="activity-feedback" data-activity-feedback hidden>
+                        <p class="activity-feedback-text" data-activity-feedback-text></p>
+                      </div>
+
+                      <div class="activity-controls">
+                        <button type="button" class="activity-control activity-control-secondary" data-activity-prev>
+                          Previous
+                        </button>
+                        <button type="button" class="activity-control activity-control-primary" data-activity-submit>
+                          Submit
+                        </button>
+                        <button type="button" class="activity-control activity-control-primary" data-activity-next>
+                          Next
+                        </button>
+                        <button type="button" class="activity-control activity-control-secondary" data-activity-reset>
+                          Reset
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script is:inline>
+      const mobileNavs = document.querySelectorAll("[data-mobile-nav]");
+
+      document.addEventListener("click", (event) => {
+        mobileNavs.forEach((menu) => {
+          if (!menu.contains(event.target)) {
+            menu.removeAttribute("open");
+          }
+        });
+      });
+
+      mobileNavs.forEach((menu) => {
+        menu.querySelectorAll("[data-mobile-nav-link]").forEach((link) => {
+          link.addEventListener("click", () => {
+            menu.removeAttribute("open");
+          });
+        });
+      });
+
+      const activityQuiz = document.querySelector("[data-activity-quiz]");
+
+      if (activityQuiz) {
+        const steps = Array.from(activityQuiz.querySelectorAll("[data-activity-step]"));
+        const state = steps.map(() => ({
+          selected: "",
+          submitted: false,
+          correct: false,
+        }));
+        let currentStepIndex = 0;
+
+        const updateStep = (step, index) => {
+          const selectedOption = state[index].selected;
+          const isSubmitted = state[index].submitted;
+          const isCorrect = state[index].correct;
+          const correctOption = step.dataset.correctOption;
+          const optionButtons = step.querySelectorAll("[data-option-letter]");
+          const feedback = step.querySelector("[data-activity-feedback]");
+          const feedbackText = step.querySelector("[data-activity-feedback-text]");
+          const prevButton = step.querySelector("[data-activity-prev]");
+          const submitButton = step.querySelector("[data-activity-submit]");
+          const nextButton = step.querySelector("[data-activity-next]");
+          const resetButton = step.querySelector("[data-activity-reset]");
+
+          optionButtons.forEach((button) => {
+            const optionLetter = button.dataset.optionLetter;
+            const isSelected = selectedOption === optionLetter;
+
+            button.dataset.selected = String(isSelected);
+            button.dataset.revealed = String(isSubmitted);
+            button.dataset.correct = String(optionLetter === correctOption);
+            button.dataset.incorrect = String(isSubmitted && isSelected && optionLetter !== correctOption);
+            button.disabled = isSubmitted;
+            button.setAttribute("aria-pressed", String(isSelected));
+          });
+
+          if (feedback && feedbackText) {
+            if (isSubmitted) {
+              feedback.hidden = false;
+              feedback.dataset.state = isCorrect ? "correct" : "incorrect";
+              feedbackText.textContent = isCorrect
+                ? step.dataset.correctFeedback ?? ""
+                : step.dataset.incorrectFeedback ?? "";
+            } else {
+              feedback.hidden = true;
+              feedback.dataset.state = "";
+              feedbackText.textContent = "";
+            }
+          }
+
+          step.dataset.answerState = isSubmitted ? (isCorrect ? "correct" : "incorrect") : "";
+
+          if (prevButton) {
+            prevButton.disabled = currentStepIndex === 0;
+          }
+
+          if (submitButton) {
+            submitButton.disabled = !selectedOption || isSubmitted;
+            submitButton.hidden = isSubmitted;
+          }
+
+          if (nextButton) {
+            nextButton.disabled = !isSubmitted;
+            nextButton.hidden = currentStepIndex === steps.length - 1;
+          }
+
+          if (resetButton) {
+            resetButton.disabled = !state.some((entry) => entry.selected || entry.submitted);
+          }
+        };
+
+        const renderSteps = () => {
+          steps.forEach((step, index) => {
+            step.hidden = index !== currentStepIndex;
+            updateStep(step, index);
+          });
+        };
+
+        steps.forEach((step, index) => {
+          const optionButtons = step.querySelectorAll("[data-option-letter]");
+          const prevButton = step.querySelector("[data-activity-prev]");
+          const submitButton = step.querySelector("[data-activity-submit]");
+          const nextButton = step.querySelector("[data-activity-next]");
+          const resetButton = step.querySelector("[data-activity-reset]");
+
+          optionButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+              if (state[index].submitted) {
+                return;
+              }
+
+              state[index].selected = button.dataset.optionLetter ?? "";
+              renderSteps();
+            });
+          });
+
+          prevButton?.addEventListener("click", () => {
+            currentStepIndex = Math.max(0, currentStepIndex - 1);
+            renderSteps();
+          });
+
+          submitButton?.addEventListener("click", () => {
+            const correctOption = step.dataset.correctOption;
+
+            if (!state[index].selected) {
+              return;
+            }
+
+            state[index].submitted = true;
+            state[index].correct = state[index].selected === correctOption;
+            renderSteps();
+          });
+
+          nextButton?.addEventListener("click", () => {
+            if (!state[index].submitted) {
+              return;
+            }
+
+            currentStepIndex = Math.min(steps.length - 1, currentStepIndex + 1);
+            renderSteps();
+          });
+
+          resetButton?.addEventListener("click", () => {
+            state.forEach((entry) => {
+              entry.selected = "";
+              entry.submitted = false;
+              entry.correct = false;
+            });
+
+            currentStepIndex = 0;
+            renderSteps();
+          });
+        });
+
+        renderSteps();
+      }
+    </script>
+  </body>
+</html>
