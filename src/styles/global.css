@@ -148,6 +148,19 @@ input:disabled {
   box-shadow: none;
 }
 
+.site-course-title,
+.site-course-title-mobile {
+  color: var(--sn-ink-soft);
+}
+
+.site-course-title {
+  line-height: 1.35;
+}
+
+.site-course-title-mobile {
+  line-height: 1.25;
+}
+
 .site-nav {
   align-items: center;
   gap: 1rem;
