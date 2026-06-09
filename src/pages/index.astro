@@ -25,16 +25,14 @@ const activityBriefBackground = (imagePath: string) =>
   `background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.82) 40%, rgba(17, 17, 17, 0.94) 100%), url('${imagePath}')`;
 
 const sectionNav = [
-  { href: "#lesson-1", label: "Lesson 1" },
-  { href: "#lesson-2", label: "Lesson 2" },
-  { href: "#lesson-3", label: "Lesson 3" },
-  { href: "#lesson-4", label: "Lesson 4" },
-  { href: "#lesson-5", label: "Lesson 5" },
-  { href: "#lesson-6", label: "Lesson 6" },
+  { href: "#lesson-1", label: "Welcome" },
+  { href: "#lesson-3", label: "Kitchen" },
+  { href: "#lesson-4", label: "Styling Solutions" },
+  { href: "#lesson-5", label: "Home Cleaning" },
+  { href: "#lesson-6", label: "How to Sell" },
 ];
 
 const lessonOne = {
-  lessonLabel: "Lesson 1:",
   banner: "/images/homebanner.jpg",
   eyebrow: navCourseTitle,
   title: "Welcome to SharkNinja",
@@ -46,7 +44,6 @@ const lessonOne = {
 };
 
 const lessonTwo = {
-  lessonLabel: "Lesson 2:",
   title: "Explore the Range",
   categories: [
     {
@@ -70,7 +67,6 @@ const lessonTwo = {
 };
 
 const lessonThree = {
-  lessonLabel: "Lesson 3:",
   banner: sharedSectionBanner,
   title: "Kitchen",
   description:
@@ -114,7 +110,6 @@ const lessonThree = {
 };
 
 const lessonFour = {
-  lessonLabel: "Lesson 4:",
   banner: stylingSectionBanner,
   title: "Styling Solutions",
   description:
@@ -140,7 +135,6 @@ const lessonFour = {
 };
 
 const lessonFive = {
-  lessonLabel: "Lesson 5:",
   banner: floorSectionBanner,
   title: "Home Cleaning",
   description:
@@ -199,7 +193,6 @@ const lessonFive = {
 };
 
 const lessonSix = {
-  lessonLabel: "Lesson 6:",
   banner: sellingSectionBanner,
   title: "How to Sell",
   description:
@@ -414,9 +407,8 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
           <div class="course-hero" style={courseHeroBackground(lessonOne.banner)}>
             <div class="course-hero-panel">
-              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonOne.lessonLabel}</p>
-              <p class="lesson-eyebrow mt-4 text-sm font-semibold text-slate-600">{lessonOne.eyebrow}</p>
-              <h1 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl lg:text-5xl">
+              <p class="lesson-eyebrow text-sm font-semibold text-slate-600">{lessonOne.eyebrow}</p>
+              <h1 class="heading-display mt-4 text-3xl font-semibold sm:text-4xl lg:text-5xl">
                 {lessonOne.title}
               </h1>
               <div class="mt-6 space-y-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
@@ -431,8 +423,7 @@ const lessonSix = {
 
       <section id="lesson-2" class="section-wrap reveal mt-8 scroll-mt-28">
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-pink);">
-          <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonTwo.lessonLabel}</p>
-          <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">
+          <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
             {lessonTwo.title}
           </h2>
           <div class="feature-grid mt-8 grid gap-0 md:grid-cols-3">
@@ -452,8 +443,7 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-purple);">
           <div class="section-banner section-banner-kitchen" style={kitchenBannerBackground(lessonThree.banner)}>
             <div class="section-banner-copy">
-              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonThree.lessonLabel}</p>
-              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">{lessonThree.title}</h2>
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">{lessonThree.title}</h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
                 {lessonThree.description}
               </p>
@@ -507,8 +497,7 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-pink);">
           <div class="section-banner" style={sectionBannerBackground(lessonFour.banner)}>
             <div class="section-banner-copy">
-              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonFour.lessonLabel}</p>
-              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">
                 {lessonFour.title}
               </h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
@@ -567,8 +556,7 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-green);">
           <div class="section-banner" style={sectionBannerBackground(lessonFive.banner)}>
             <div class="section-banner-copy">
-              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonFive.lessonLabel}</p>
-              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">{lessonFive.title}</h2>
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">{lessonFive.title}</h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
                 {lessonFive.description}
               </p>
@@ -622,8 +610,7 @@ const lessonSix = {
         <div class="lesson-panel px-6 py-6 sm:px-8 sm:py-8 lg:px-10" style="--lesson-accent: var(--sn-brand-blue);">
           <div class="section-banner" style={sectionBannerBackground(lessonSix.banner)}>
             <div class="section-banner-copy">
-              <p class="lesson-meta text-sm font-semibold tracking-[0.08em] text-slate-600">{lessonSix.lessonLabel}</p>
-              <h2 class="heading-display mt-3 text-3xl font-semibold sm:text-4xl">{lessonSix.title}</h2>
+              <h2 class="heading-display text-3xl font-semibold sm:text-4xl">{lessonSix.title}</h2>
               <p class="mt-4 max-w-4xl text-base leading-7 text-slate-700 sm:text-lg">
                 {lessonSix.description}
               </p>
@@ -644,8 +631,7 @@ const lessonSix = {
                     <p class="step-showcase-title text-base font-semibold text-slate-800">{step.name}</p>
                   </div>
                   <div class="step-showcase-block">
-                    <p class="data-label text-sm font-semibold tracking-[0.08em] text-slate-500">What to Do</p>
-                    <ul class="step-action-list mt-3">
+                    <ul class="step-action-list">
                       {step.actions.map((action) => (
                         <li>{action}</li>
                       ))}
