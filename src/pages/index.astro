@@ -24,6 +24,8 @@ const kitchenBannerBackground = (imagePath: string) =>
 const activityBriefBackground = (imagePath: string) =>
   `background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.82) 40%, rgba(17, 17, 17, 0.94) 100%), url('${imagePath}')`;
 
+const keyPointLead = (lead: string, text: string) => ({ lead, text });
+
 const sectionNav = [
   { href: "#lesson-1", label: "Welcome" },
   { href: "#lesson-3", label: "Kitchen" },
@@ -77,9 +79,12 @@ const lessonThree = {
       imageAlt: "Ninja Creami Deluxe",
       description: "An easy way to make desserts at home.",
       keyPoints: [
-        "Makes desserts quickly",
-        "Simple to use",
-        "Great for home treats",
+        keyPointLead(
+          "10 one-touch programs",
+          " - Make Ice Cream, Sorbet, Light Ice Cream, Gelato, Milkshakes, and Mix-Ins - plus new options like Frappe, Frozen Drinks, Slushies, and Frozen Yoghurt.",
+        ),
+        "Prep is quick, but you must freeze product for 12 hours before making the treat.",
+        "It transforms frozen ingredients into smooth ice cream, sorbet, milkshakes, and more.",
       ],
       sellingTip: "Focus on how quick and easy it is to make desserts.",
       whenToRecommend: [
@@ -94,9 +99,22 @@ const lessonThree = {
       imageAlt: "Ninja Creami Swirl",
       description: "A dessert maker with more options and variety.",
       keyPoints: [
-        "Offers more variety",
-        "Flexible dessert options",
-        "Easy to use",
+        keyPointLead(
+          "13 easy programs at the touch of a button:",
+          " From creamy scoops to soft serve, you can make a wide range of frozen treats quickly and easily.",
+        ),
+        keyPointLead(
+          "Turns almost anything into ice cream:",
+          " The Creamify technology blends ingredients into smooth desserts - including healthier, high-protein or low-calorie options.",
+        ),
+        keyPointLead(
+          "Fun for the whole family:",
+          " Create different flavours and get creative with your own recipes at home.",
+        ),
+        keyPointLead(
+          "Add your favourite mix-ins:",
+          " Personalise your treats by adding chocolate, nuts, biscuits, and more for extra flavour and texture.",
+        ),
       ],
       sellingTip: "Focus on variety and giving customers more choice.",
       whenToRecommend: [
@@ -119,9 +137,10 @@ const lessonFour = {
     imageAlt: "Shark FlexStyle 5in1 Air Styler",
     description: "A styling tool with multiple functions in one.",
     keyPoints: [
-      "Includes multiple attachments",
-      "Different styling options",
-      "Easy to switch between functions",
+      "Switch from powerful hair dryer to styling wand in seconds.",
+      "5 ways to style - Curl, Straighten, Volumise, Smooth, Define.",
+      "Ideal for all hair types.",
+      "Compact and lightweight",
     ],
     sellingTip:
       "Focus on convenience and having one tool for different styles.",
@@ -145,9 +164,15 @@ const lessonFive = {
       imageAlt: "Shark Power Detect Clean & Empty",
       description: "A smart vacuum that cleans and empties itself.",
       keyPoints: [
-        "Detects dirt automatically",
-        "Empties itself",
-        "Low effort cleaning",
+        "Engineered for pet-friendly homes, its standout feature is the Large Self-Empty Base, which stores debris for up to 45 days, keeping 99.9% of dust and allergens trapped.",
+        keyPointLead(
+          "Multi-directional cleaning technology:",
+          " System designed to clean forward AND backward for faster and more efficient cleaning.",
+        ),
+        keyPointLead(
+          "Powerful hair & hair pickup:",
+          " The Plus Hair & Hair Anti-Tangle System directly removes hair and hair from the brush roll, so you don't have to.",
+        ),
       ],
       sellingTip: "Focus on convenience and low effort.",
       whenToRecommend: [
@@ -161,9 +186,8 @@ const lessonFive = {
       imageAlt: "Shark Power Detect Cordless",
       description: "A cordless vacuum for quick, everyday cleaning.",
       keyPoints: [
-        "Cordless and easy to move",
-        "Lightweight",
-        "Great for daily use",
+        "Automatically adjusts suction for optimal performance on carpets and hard floors.",
+        "Delivers powerful, consistent cleaning across all surfaces.",
       ],
       sellingTip: "Focus on ease of use and flexibility.",
       whenToRecommend: [
@@ -177,9 +201,14 @@ const lessonFive = {
       imageAlt: "Shark PowerPro Cordless",
       description: "A powerful vacuum designed for deeper cleaning.",
       keyPoints: [
-        "Strong cleaning performance",
-        "Built for bigger cleaning tasks",
-        "Reliable and effective",
+        keyPointLead(
+          "Flexology:",
+          " Allows you to bend the wand to easily clean under furniture or fold it over for compact freestanding storage.",
+        ),
+        keyPointLead(
+          "Convertible:",
+          " Change to a handheld vacuum for cleaning furniture, surfaces and stairs",
+        ),
       ],
       sellingTip: "Focus on power and performance.",
       whenToRecommend: [
@@ -462,7 +491,18 @@ const lessonSix = {
                   <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Key Points</p>
                   <ul class="outline-list mt-4">
                     {product.keyPoints.map((point) => (
-                      <li>{point}</li>
+                      <li>
+                        <span class="outline-list-copy">
+                          {typeof point === "string" ? (
+                            point
+                          ) : (
+                            <>
+                              <strong>{point.lead}</strong>
+                              {point.text}
+                            </>
+                          )}
+                        </span>
+                      </li>
                     ))}
                   </ul>
 
@@ -520,7 +560,18 @@ const lessonSix = {
                     <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Key Points</p>
                     <ul class="outline-list mt-4">
                       {lessonFour.product.keyPoints.map((point) => (
-                        <li>{point}</li>
+                        <li>
+                          <span class="outline-list-copy">
+                            {typeof point === "string" ? (
+                              point
+                            ) : (
+                              <>
+                                <strong>{point.lead}</strong>
+                                {point.text}
+                              </>
+                            )}
+                          </span>
+                        </li>
                       ))}
                     </ul>
 
@@ -575,7 +626,18 @@ const lessonSix = {
                   <p class="data-label mt-6 text-sm font-semibold tracking-[0.08em] text-slate-500">Key Points</p>
                   <ul class="outline-list mt-4">
                     {product.keyPoints.map((point) => (
-                      <li>{point}</li>
+                      <li>
+                        <span class="outline-list-copy">
+                          {typeof point === "string" ? (
+                            point
+                          ) : (
+                            <>
+                              <strong>{point.lead}</strong>
+                              {point.text}
+                            </>
+                          )}
+                        </span>
+                      </li>
                     ))}
                   </ul>
 
